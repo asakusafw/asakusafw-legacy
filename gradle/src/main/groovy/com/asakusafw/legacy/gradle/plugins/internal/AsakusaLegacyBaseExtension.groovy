@@ -19,6 +19,7 @@ package com.asakusafw.legacy.gradle.plugins.internal
  * An extension object for the Asakusa legacy features.
  * This is only for internal use.
  * @since 0.8.1
+ * @version 0.10.3
  */
 class AsakusaLegacyBaseExtension {
 
@@ -31,11 +32,6 @@ class AsakusaLegacyBaseExtension {
      * The core libraries version.
      */
     String coreVersion
-
-    /**
-     * The SDK libraries version.
-     */
-    String sdkVersion
 
     /**
      * The default Commons Configuration version.
