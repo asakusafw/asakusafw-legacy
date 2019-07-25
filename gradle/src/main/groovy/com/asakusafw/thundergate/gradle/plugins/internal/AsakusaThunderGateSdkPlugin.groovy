@@ -118,7 +118,7 @@ class AsakusaThunderGateSdkPlugin implements Plugin<Project> {
             task.group AsakusaSdkPlugin.ASAKUSAFW_BUILD_GROUP
             task.description 'Executes ThunderGate DDL files and generates their data models.'
             task.sourcepath << project.sourceSets.main.thundergateDdl
-            task.toolClasspath << project.sourceSets.main.compileClasspath
+            task.toolClasspath << project.configurations.asakusaDmdlCompiler
             task.systemDdlFiles << { getThunderGateFile(task, 'bulkloader/sql/create_table.sql') }
             task.systemDdlFiles << { getThunderGateFile(task, 'bulkloader/sql/insert_import_table_lock.sql') }
             task.conventionMapping.with {
