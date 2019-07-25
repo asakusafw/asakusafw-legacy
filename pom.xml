@@ -60,7 +60,7 @@
     <plugin.project-info-reports.version>2.9</plugin.project-info-reports.version>
 
     <!-- artifact id/versions -->
-    <asakusafw.version>0.10.3-SNAPSHOT</asakusafw.version>
+    <asakusafw.version>0.10.3</asakusafw.version>
     <asakusafw-mapreduce.version>${asakusafw.version}</asakusafw-mapreduce.version>
     <hadoop.version>2.7.3</hadoop.version>
     <hadoop.artifact.id>hadoop-client</hadoop.artifact.id>
