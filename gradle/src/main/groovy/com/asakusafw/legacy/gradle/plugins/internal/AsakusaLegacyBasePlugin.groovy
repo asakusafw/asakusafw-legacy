@@ -132,7 +132,7 @@ class AsakusaLegacyBasePlugin implements Plugin<Project> {
     }
 
     private void extendVersionsTask() {
-        project.tasks.getByName(AsakusafwBasePlugin.TASK_VERSIONS) << {
+        project.tasks.getByName(AsakusafwBasePlugin.TASK_VERSIONS).doLast {
             logger.lifecycle "Asakusa Legacy modules: ${extension.featureVersion}"
         }
     }
