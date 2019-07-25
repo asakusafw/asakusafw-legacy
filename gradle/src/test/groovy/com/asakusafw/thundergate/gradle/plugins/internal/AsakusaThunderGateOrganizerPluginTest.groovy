@@ -66,7 +66,7 @@ class AsakusaThunderGateOrganizerPluginTest extends OrganizerTestRoot {
     @Test
     public void extension_defaults() {
         AsakusafwOrganizerThunderGateExtension extension = project.asakusafwOrganizer.thundergate
-        assert extension.enabled == false
+        assert extension.enabled == true
         assert extension.target == null
     }
 
