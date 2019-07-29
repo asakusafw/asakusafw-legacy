@@ -58,7 +58,7 @@ class AsakusaUpgradeTest {
     }
 
     /**
-     * Test for {@code 4.7} (Asakusa legacy modules {@code 0.10.3}).
+     * Test for {@code 4.7} (Asakusa legacy modules {@code 0.10.4}).
      */
     @Test
     void 'v4.7'() {
