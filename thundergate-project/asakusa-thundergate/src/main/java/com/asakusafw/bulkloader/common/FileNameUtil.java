@@ -188,7 +188,7 @@ public final class FileNameUtil {
         if (seq == null) {
             seq = Integer.valueOf(1);
         } else {
-            seq++;
+            seq = seq + 1;
         }
 
         fileNameMap.put(tableName, seq);

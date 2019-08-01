@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+  <Match class="com.asakusafw.testdriver.LegacyJobflowExecutor">
+    <Or>
+      <Bug pattern="NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE"/>
+    </Or>
+  </Match>
+</FindBugsFilter>
