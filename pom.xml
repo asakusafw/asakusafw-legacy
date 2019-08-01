@@ -402,7 +402,7 @@ encoding/<project>=UTF-8
         </plugin>
         <plugin>
           <groupId>de.jflex</groupId>
-          <artifactId>maven-jflex-plugin</artifactId>
+          <artifactId>jflex-maven-plugin</artifactId>
           <version>${plugin.jflex.version}</version>
         </plugin>
         <plugin>
@@ -480,6 +480,8 @@ encoding/<project>=UTF-8
           </dependencies>
           <configuration>
             <configLocation>com/asakusafw/checkstyle.xml</configLocation>
+            <sourceDirectories>${project.build.sourceDirectory}</sourceDirectories>
+            <linkXRef>false</linkXRef>
           </configuration>
         </plugin>
         <plugin>
@@ -532,6 +534,8 @@ encoding/<project>=UTF-8
         <version>${plugin.checkstyle.version}</version>
         <configuration>
           <configLocation>com/asakusafw/checkstyle.xml</configLocation>
+          <sourceDirectories>${project.build.sourceDirectory}</sourceDirectories>
+          <linkXRef>false</linkXRef>
         </configuration>
       </plugin>
       <plugin>
