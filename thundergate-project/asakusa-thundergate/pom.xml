@@ -6,7 +6,7 @@
   <parent>
     <artifactId>asakusa-thundergate-project</artifactId>
     <groupId>com.asakusafw</groupId>
-    <version>0.9.0-SNAPSHOT</version>
+    <version>0.10.4-SNAPSHOT</version>
   </parent>
 
   <packaging>jar</packaging>
@@ -43,8 +43,8 @@
         </configuration>
       </plugin>
       <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>findbugs-maven-plugin</artifactId>
+        <groupId>com.github.spotbugs</groupId>
+        <artifactId>spotbugs-maven-plugin</artifactId>
         <configuration>
           <excludeFilterFile>src/conf/findbugs/exclude.xml</excludeFilterFile>
         </configuration>
@@ -69,6 +69,11 @@
       <groupId>${project.groupId}</groupId>
       <artifactId>asakusa-thundergate-runtime</artifactId>
       <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.asakusafw</groupId>
+      <artifactId>asakusa-runtime-tsv</artifactId>
+      <version>${asakusafw.version}</version>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>

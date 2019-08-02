@@ -61,7 +61,7 @@ class AsakusaThunderGateOrganizerPlugin implements Plugin<Project> {
         AsakusafwOrganizerPluginConvention convention = project.asakusafwOrganizer
         convention.extensions.create('thundergate', AsakusafwOrganizerThunderGateExtension)
         convention.thundergate.conventionMapping.with {
-            enabled = { false }
+            enabled = { true }
             target = { null }
         }
     }

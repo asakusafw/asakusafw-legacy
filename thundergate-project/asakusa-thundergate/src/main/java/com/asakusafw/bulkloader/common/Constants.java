@@ -17,6 +17,7 @@ package com.asakusafw.bulkloader.common;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import org.apache.hadoop.io.SequenceFile.CompressionType;
@@ -84,9 +85,9 @@ public final class Constants {
      * プロパティファイル
      */
     /** DBサーバで読み込むプロパティファイル。 */
-    public static final List<String> PROPERTIES_DB = Arrays.asList(new String[]{"bulkloader-conf-db.properties"});
+    public static final List<String> PROPERTIES_DB = Collections.singletonList("bulkloader-conf-db.properties");
     /** HadoopClusterで読み込むプロパティファイル。 */
-    public static final List<String> PROPERTIES_HC = Arrays.asList(new String[]{"bulkloader-conf-hc.properties"});
+    public static final List<String> PROPERTIES_HC = Collections.singletonList("bulkloader-conf-hc.properties");
 
 
     /*

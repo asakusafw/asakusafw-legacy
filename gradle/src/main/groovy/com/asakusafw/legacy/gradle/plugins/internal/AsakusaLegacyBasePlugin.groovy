@@ -66,7 +66,6 @@ class AsakusaLegacyBasePlugin implements Plugin<Project> {
         driveProperties(ARTIFACT_INFO_PATH, [
             'feature-version': 'Asakusa Legacy modules',
             'core-version': 'Asakusa Core libraries',
-            'sdk-version': 'Asakusa SDK',
         ])
         project.logger.info "Asakusa Legacy modules: ${extension.featureVersion}"
     }
@@ -133,7 +132,7 @@ class AsakusaLegacyBasePlugin implements Plugin<Project> {
     }
 
     private void extendVersionsTask() {
-        project.tasks.getByName(AsakusafwBasePlugin.TASK_VERSIONS) << {
+        project.tasks.getByName(AsakusafwBasePlugin.TASK_VERSIONS).doLast {
             logger.lifecycle "Asakusa Legacy modules: ${extension.featureVersion}"
         }
     }

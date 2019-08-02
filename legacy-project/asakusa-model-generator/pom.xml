@@ -6,7 +6,7 @@
   <parent>
     <artifactId>asakusa-legacy-project</artifactId>
     <groupId>com.asakusafw</groupId>
-    <version>0.9.0-SNAPSHOT</version>
+    <version>0.10.4-SNAPSHOT</version>
   </parent>
 
   <packaging>jar</packaging>
@@ -28,8 +28,8 @@
         </executions>
       </plugin>
       <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>findbugs-maven-plugin</artifactId>
+        <groupId>com.github.spotbugs</groupId>
+        <artifactId>spotbugs-maven-plugin</artifactId>
         <configuration>
           <excludeFilterFile>src/conf/findbugs/exclude.xml</excludeFilterFile>
         </configuration>
@@ -73,6 +73,12 @@
       <scope>provided</scope>
     </dependency>
 
+    <dependency>
+      <groupId>com.asakusafw</groupId>
+      <artifactId>asakusa-runtime-tsv</artifactId>
+      <version>${asakusafw.version}</version>
+      <scope>test</scope>
+    </dependency>
     <dependency>
       <groupId>org.hamcrest</groupId>
       <artifactId>hamcrest-library</artifactId>

@@ -344,9 +344,9 @@ public class TestUtils {
      */
     public boolean inspect() {
         boolean success = true;
-        for (String tablename : dataHolderMap.keySet()) {
-            TestDataHolder dataHolder = dataHolderMap.get(tablename);
-            Inspector inspector = inspectorMap.get(tablename);
+        for (Map.Entry<String, TestDataHolder> entry : dataHolderMap.entrySet()) {
+            TestDataHolder dataHolder = entry.getValue();
+            Inspector inspector = inspectorMap.get(entry.getKey());
             if (inspector == null) {
                 inspector = new DefaultInspector();
             }

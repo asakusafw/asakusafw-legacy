@@ -84,7 +84,15 @@ class AsakusaThunderGateSdkPlugin implements Plugin<Project> {
         PluginUtils.afterEvaluate(project) {
             AsakusaLegacyBaseExtension base = AsakusaLegacyBasePlugin.get(project)
             project.dependencies {
+                compile "com.asakusafw:asakusa-thundergate-vocabulary:${base.featureVersion}"
+                testCompile "com.asakusafw:asakusa-thundergate-test-moderator:${base.featureVersion}"
+                asakusaDmdlCompiler "com.asakusafw:asakusa-thundergate-dmdl:${base.featureVersion}"
                 asakusaThunderGateFiles "com.asakusafw:asakusa-thundergate:${base.featureVersion}:dist@jar"
+            }
+            PluginUtils.afterPluginEnabled(project, "asakusafw-mapreduce") {
+                project.dependencies {
+                    asakusaMapreduceCommon "com.asakusafw:asakusa-thundergate-plugin:${base.featureVersion}"
+                }
             }
         }
     }
@@ -110,7 +118,7 @@ class AsakusaThunderGateSdkPlugin implements Plugin<Project> {
             task.group AsakusaSdkPlugin.ASAKUSAFW_BUILD_GROUP
             task.description 'Executes ThunderGate DDL files and generates their data models.'
             task.sourcepath << project.sourceSets.main.thundergateDdl
-            task.toolClasspath << project.sourceSets.main.compileClasspath
+            task.toolClasspath << project.configurations.asakusaDmdlCompiler
             task.systemDdlFiles << { getThunderGateFile(task, 'bulkloader/sql/create_table.sql') }
             task.systemDdlFiles << { getThunderGateFile(task, 'bulkloader/sql/insert_import_table_lock.sql') }
             task.conventionMapping.with {

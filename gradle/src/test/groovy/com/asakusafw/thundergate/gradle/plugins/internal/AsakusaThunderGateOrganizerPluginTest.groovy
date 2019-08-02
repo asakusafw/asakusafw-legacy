@@ -40,6 +40,7 @@ class AsakusaThunderGateOrganizerPluginTest extends OrganizerTestRoot {
      */
     @Rule
     public final TestRule initializer = new TestRule() {
+        @Override
         Statement apply(Statement stmt, Description desc) {
             project = ProjectBuilder.builder().withName(desc.methodName).build()
             project.apply plugin: AsakusaThunderGateOrganizerPlugin
@@ -65,7 +66,7 @@ class AsakusaThunderGateOrganizerPluginTest extends OrganizerTestRoot {
     @Test
     public void extension_defaults() {
         AsakusafwOrganizerThunderGateExtension extension = project.asakusafwOrganizer.thundergate
-        assert extension.enabled == false
+        assert extension.enabled == true
         assert extension.target == null
     }
 

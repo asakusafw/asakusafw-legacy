@@ -50,10 +50,18 @@ class AsakusaUpgradeTest {
     }
 
     /**
-     * Test for {@code 2.14.1} (Asakusa legacy modules {@code 0.9.0+}).
+     * Test for {@code 2.14.1} (Asakusa legacy modules {@code 0.8.1}).
      */
     @Test
     void 'v2.14.1'() {
+        doUpgradeFromTestName()
+    }
+
+    /**
+     * Test for {@code 4.7} (Asakusa legacy modules {@code 0.10.4}).
+     */
+    @Test
+    void 'v4.7'() {
         doUpgradeFromTestName()
     }
 
@@ -70,4 +78,6 @@ class AsakusaUpgradeTest {
         String script = GradleTestkitHelper.getSimpleBuildScript(classpath, 'asakusafw-sdk', 'asakusafw-organizer', 'asakusafw-legacy')
         GradleTestkitHelper.runGradle(projectDir.root, version, script, AsakusafwBasePlugin.TASK_UPGRADE)
     }
+
+    
 }
