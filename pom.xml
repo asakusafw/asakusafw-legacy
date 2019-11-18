@@ -64,7 +64,7 @@
     <asakusafw-mapreduce.version>${asakusafw.version}</asakusafw-mapreduce.version>
     <hadoop.version>2.7.3</hadoop.version>
     <hadoop.artifact.id>hadoop-client</hadoop.artifact.id>
-    <hive.version>1.2.2</hive.version>
+    <hive.version>2.3.4</hive.version>
     <sdk.hive.version>1.2.2</sdk.hive.version>
     <snappy.version>1.1.7.3</snappy.version>
     <commons.cli.version>1.2</commons.cli.version>
