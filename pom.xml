@@ -69,7 +69,7 @@
     <snappy.version>1.1.7.3</snappy.version>
     <commons.cli.version>1.2</commons.cli.version>
     <commons.configuration.version>1.10</commons.configuration.version>
-    <commons.io.version>2.4</commons.io.version>
+    <commons.io.version>2.7</commons.io.version>
     <commons.lang.version>2.6</commons.lang.version>
     <commons.logging.version>1.2</commons.logging.version>
     <logback.version>1.2.3</logback.version>
